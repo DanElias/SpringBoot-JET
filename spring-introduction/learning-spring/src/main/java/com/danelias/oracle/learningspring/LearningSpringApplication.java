@@ -18,10 +18,9 @@ public class LearningSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LearningSpringApplication.class, args);
-
-
 	}
 
+	/*
 	@RestController
 	@RequestMapping("/rooms")
 	public class RoomController{
@@ -53,5 +52,6 @@ public class LearningSpringApplication {
 		@GetMapping
 		public Iterable<Reservation> getReservations(){return this.reservationRepository.findAll();}
 	}
+	 */
 
 }
