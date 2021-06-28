@@ -15,7 +15,13 @@ export default class Contacts extends Component {
      //Method that runs before the component renders on ui
      // fetch data before rendering
     componentDidMount() {
-        fetch('http:localhost:8080/api/contacts') //fetch data from api
+        fetch('http://localhost:8080/api/contacts', {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            }
+        }) //fetch data from api
         .then(response => response.json()) // convert to json
         .then(data => this.setState({contacts: data})) // set the state with new data
     }
