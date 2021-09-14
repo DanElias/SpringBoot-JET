@@ -13,7 +13,7 @@ public class JDBCExecutor {
         try{
             Connection connection = dcm.getConnection();
             CustomerDAO customerDAO = new CustomerDAO(connection);
-            Customer customer = customerDAO.findById(10000);
+            Customer customer = customerDAO.findById(10001);
             System.out.println(customer.getFirstName() + " " + customer.getLastName() + " " +
                     customer.getEmail());
             customer.setEmail("gwashington@wh.gov");
